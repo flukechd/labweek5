@@ -61,8 +61,8 @@ all: main-build
 main-build: week5.elf secondary-outputs
 
 # Tool invocations
-week5.elf: $(OBJS) $(USER_OBJS) D:\Githubforever\Week5-main\Week5-main\week5\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "week5.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Githubforever\Week5-main\Week5-main\week5\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="week5.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+week5.elf: $(OBJS) $(USER_OBJS) D:\Githubforever\labweek5\week5\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "week5.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Githubforever\labweek5\week5\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="week5.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
